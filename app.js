@@ -8,7 +8,7 @@ user = {"email":"d@d.com", "pass":"temp"};
 
 const cors = require('cors');
 app.use(cors({
-    origin: 'http://localhost:4242'
+    origin: ['http://localhost:4242', "http://locahot:4200"]
 }));
 
 app.post('/login', (req, res) => {
