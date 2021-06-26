@@ -12,9 +12,11 @@ app.use(cors());
 app.post('/login', (req, res) => {
     // logica para hacer login
     let log = false;
-    if (req.body.email == user.email && req.body.pass == user.pass) {
-        log = true;
-    };
+    if (req.body.email && req.body.pass) {
+        if (req.body.email === user.email && req.body.pass === user.pass) {
+            log = true;
+        };
+    }
     res.send(log)
 });
 
