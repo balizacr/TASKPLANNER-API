@@ -6,6 +6,11 @@ const port = process.env.PORT || 4242;
 users = [{"email":"d@d.com", "pass":"temp"}, {"email":"a@a.com", "pass":"algo"}];
 user = {"email":"d@d.com", "pass":"temp"};
 
+const cors = require('cors');
+app.use(cors({
+    origin: 'http://localhost:4242'
+}));
+
 app.post('/login', (req, res) => {
     // logica para hacer login
     let log = false;
@@ -16,7 +21,7 @@ app.post('/login', (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-
+    // if (req.body.)
 });
 
 
