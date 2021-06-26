@@ -7,9 +7,7 @@ users = [{"email":"d@d.com", "pass":"temp"}, {"email":"a@a.com", "pass":"algo"}]
 user = {"email":"d@d.com", "pass":"temp"};
 
 const cors = require('cors');
-app.use(cors({
-    origin: ['http://localhost:4242', "http://locahot:4200"]
-}));
+app.use(cors());
 
 app.post('/login', (req, res) => {
     // logica para hacer login
